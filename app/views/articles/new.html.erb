@@ -1,5 +1,16 @@
 <h1>Create a new article</h1>
 
+<% if @article.errors.any? %>
+  <div class='msg'>
+    <h2>The following errors prevented article from being saved</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model: @article do |form| %>
   <div>
     <%= form.label :title %><br>
