@@ -11,7 +11,7 @@ RSpec.describe Article, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it "description shouldbe present" do
+    it "description should be present" do
       subject.description = nil
       expect(subject).to_not be_valid
     end
@@ -23,7 +23,7 @@ RSpec.describe Article, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it "title shouldnot be too short" do
+    it "title should not be too short" do
       subject.title = "a"
       expect(subject).to_not be_valid
     end
